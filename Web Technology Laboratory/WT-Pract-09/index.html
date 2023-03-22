@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Registration & Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="myCtrl">
+  <h1><b>REGISTRATION & LOGIN</b></h1>
+
+  <!-- Registration Form -->
+  <h2>Register</h2>
+  <form ng-submit="registerUser()">
+    <label for="firstName">First Name:</label>
+    <input type="text" ng-model="firstName" required><br>
+    <br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" ng-model="lastName" required><br>
+    <br>
+    <label for="username">Username:</label>
+    <input type="text" ng-model="username" required><br>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" ng-model="password" required><br>    
+    <br>
+    <input type="submit" class="button" value="Register">
+  </form>
+
+  <!-- Login Form -->
+  <h2>Login</h2>
+  <form ng-submit="loginUser()">
+    <label for="username">Username:</label>
+    <input type="text" ng-model="username" required><br>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" ng-model="password" required><br>
+    <br>
+    <input type="submit" value="Login" class="button">
+  </form>
+
+  <!-- Error Message -->
+  <div ng-if="errorMessage">{{errorMessage}}</div>
+
+  <!-- Success Message -->
+  <div ng-if="successMessage">{{successMessage}}</div>
+
+</body>
+</html>
