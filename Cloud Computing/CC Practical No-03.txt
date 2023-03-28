@@ -1,0 +1,55 @@
+PRACTICAL NO: 03
+Title: Creating an Application in SalesForce.com using Apex programming Language.
+
+STEPS TO CREATE AN APPLICATION :
+
+Step No 1: Create new org:
+https://developer.salesforce.com/signup
+
+Signup Page:
+
+
+Step No 2: After signup, loging using following URL
+https://login.salesforce.com/
+
+Step No 3: Login Page (Enter your credential to login)
+Login Page:-
+
+
+Home Page:-
+
+
+
+
+
+
+
+
+
+1. Open Developer Console
+
+
+
+2. File ---> New ---> Select Apex Class
+
+3. Give Name for Apex Class:
+4. Type below mentioned code
+public class Demo
+{
+public static void Demo1()
+{
+System.debug('WELCOME TO METIOE NASHIK');
+}
+}
+
+Note : you can write any code as application
+
+5. Click on Debug ---> Open Execute Acronymous Window
+6. Type below code(Apex Code)
+Demo.Demo1();
+
+7. Click on Open log then Execute code
+8. Click on Debug only (You will get output)
+
+OUTPUT:
+
