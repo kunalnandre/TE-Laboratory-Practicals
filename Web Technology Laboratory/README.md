@@ -84,3 +84,8 @@ e.g., Design registration (first name, last name, username, password) and login 
 
 Design and implement a business interface with necessary business logic for any web application using EJB.
 e.g., Design and implement the web application logic for deposit and withdraw amount transactions using EJB.
+
+## Mini Project:
+
+Design and implement a dynamic web application for any business functionality
+by using web development technologies that you have learnt in the above given assignments.
