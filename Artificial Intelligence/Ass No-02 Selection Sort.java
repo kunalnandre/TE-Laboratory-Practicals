@@ -19,7 +19,7 @@ public class Selectionsort {
 	}
     public static void main(String[] args) {
     	 Scanner scanner = new Scanner(System.in);
-         System.out.print("Enter the size of the array: ");
+         System.out.print("Enter the elements of the array: ");
          int size = scanner.nextInt();
          int[] arr = new int[size];
 
@@ -32,3 +32,24 @@ public class Selectionsort {
         System.out.println("Sorted array is: " + Arrays.toString(sortedArr));
     }
 }
+
+
+// Output
+
+/*
+Enter the elements of the array: 6
+Enter the elements of the array:
+56
+45
+12
+96
+78
+56
+Pass 1: [12, 45, 56, 96, 78, 56]
+Pass 2: [12, 45, 56, 96, 78, 56]
+Pass 3: [12, 45, 56, 96, 78, 56]
+Pass 4: [12, 45, 56, 56, 78, 96]
+Pass 5: [12, 45, 56, 56, 78, 96]
+Pass 6: [12, 45, 56, 56, 78, 96]
+Sorted array is: [12, 45, 56, 56, 78, 96]
+*/
