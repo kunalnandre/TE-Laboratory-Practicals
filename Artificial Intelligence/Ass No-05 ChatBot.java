@@ -62,13 +62,39 @@ public class ChatBot {
 }
 
 
-// 1
-// yes
-// 2
-// yes
-// 2
-// yes
-// 3
-// yes
-// 5
-// no
+// Output:
+
+// Enter Your Name : Kamli
+// Hello Kamli Welcome to MET-Restaurent
+
+// What would you like to order Kamli 
+
+// Option 1 : Rice-Plate
+// Option 2 : Samosa
+// Option 3 : Vada-Pava
+// Option 4 : Chole-Bhature
+// Option 5 : Pohe
+
+// I would like to have option : 3
+
+// You Confirm order : Vada-Pava
+// Do you want anything else (yes/no): yes
+
+// Option 1 : Rice-Plate
+// Option 2 : Samosa
+// Option 3 : Vada-Pava
+// Option 4 : Chole-Bhature
+// Option 5 : Pohe
+
+// I would like to have option : 5
+
+// You Confirm order : Pohe
+// Do you want anything else (yes/no): no
+
+// Your Order is : 
+// Vada-Pava 1
+// Pohe 1
+
+// Your total bill is 50
+
+// Thanks for your order!
