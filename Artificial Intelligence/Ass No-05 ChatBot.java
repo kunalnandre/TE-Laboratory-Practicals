@@ -44,7 +44,7 @@ public class ChatBot {
 
     static int totalBill(int[] qCount){
         int ans = 0;
-        int[] prize = {100, 70, 190, 40, 150};
+        int[] prize = {50, 25, 25, 55, 25};
         for(int i = 0; i < qCount.length; i++){
             ans += qCount[i]*prize[i];
         }
