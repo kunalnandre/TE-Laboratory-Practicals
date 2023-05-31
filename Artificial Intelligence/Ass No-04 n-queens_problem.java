@@ -1,88 +1,77 @@
-import java.util.Scanner;
-
-public class Main {
-
-    public static boolean isSafe(int[][] arr, int x, int y, int n) {
-        for (int row = 0; row < x; row++) {
-            if (arr[row][y] == 1) {
-                return false;
+import java.util.*;
+public class nqueen {
+     public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter No of Queens :");
+        int N=sc.nextInt();
+        int board[][]= new int [N][N];
+        
+        for(int i=0;i<N;i++){
+            for(int j=0;j<N;j++){
+                board[i][j]=0;
             }
         }
-
-        int row = x;
-        int col = y;
-        while (row >= 0 && col >= 0) {
-            if (arr[row][col] == 1) {
-                return false;
+         helper(board, 0, N);
+        for(int i=0;i<N;i++){
+            for(int j=0;j<N;j++){
+                if(board[i][j]==1){
+                    System.out.print(" "+"Q"+" ");
+                }else{
+                    System.out.print(" "+"_"+" ");
+                }
+                //System.out.print(" "+board[i][j]+" ");
             }
-            row--;
-            col--;
+            System.out.println();
         }
-
-        row = x;
-        col = y;
-        while (row >= 0 && col < n) {
-            if (arr[row][col] == 1) {
-                return false;
-            }
-            row--;
-            col++;
-        }
-
+        sc.close();
+     }
+public static boolean helper(int board[][],int col,int N){
+    if(col>=N){
         return true;
     }
-
-    public static boolean nQueen(int[][] arr, int x, int n) {
-
-        if (x >= n) {
-            return true;
-        }
-
-        for (int col = 0; col < n; col++) {
-            if (isSafe(arr, x, col, n)) {
-                arr[x][col] = 1;
-                if (nQueen(arr, x + 1, n)) {
-                    return true;
-                }
-                arr[x][col] = 0;
-            }
-        }
-        return false;
+  for(int i=0;i<N;i++){
+    if(safe(board,col,i,N)){
+       board[i][col]=1;
+    
+    if(helper(board, col+1, N)){
+        return true;
     }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-
-        int[][] arr = new int[n][n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                arr[i][j] = 0;
-            }
-        }
-
-        if (nQueen(arr, 0, n)) {
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                    System.out.print(arr[i][j] + " ");
-                }
-                System.out.println();
-            }
-        }
+    board[i][col]=0;
     }
+   }
+
+    return false;
 }
 
-// OUTPUT:-
+public static boolean safe(int board[][],int col,int row,int N){
+     for(int i=0;i<col;i++){
+        if(board[row][i]==1){
+            return false;
+        }
+     }
 
-// 4
-// 0 1 0 0 
-// 0 0 0 1 
-// 1 0 0 0 
-// 0 0 1 0 
-  
-// 5
-// 1 0 0 0 0 
-// 0 0 1 0 0 
-// 0 0 0 0 1 
-// 0 1 0 0 0 
-// 0 0 0 1 0 
+     for(int i=row , j=col; i>=0 && j>=0 ;i--,j--){
+        if(board[i][j]==1){
+            return false;
+        }
+     }
+
+     for(int i=row , j=col; i<N && j>=0 ;i++,j--){
+        if(board[i][j]==1){
+            return false;
+        }
+     }
+     return true;
+
+}   
+}
+
+// Output:
+
+// Enter No of Queens :6
+//  _  _  _  Q  _  _ 
+//  Q  _  _  _  _  _ 
+//  _  _  _  _  Q  _ 
+//  _  Q  _  _  _  _ 
+//  _  _  _  _  _  Q 
+//  _  _  Q  _  _  _ 
