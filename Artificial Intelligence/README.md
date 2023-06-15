@@ -14,6 +14,8 @@ Implement Greedy search algorithm for Selection Sort.
 
 Implement A star Algorithm for any game search problem.
 
+# Group B
+
 ## Assignment No-04
 
 Implement a solution for a Constraint Satisfaction Problem using Branch and Bound and
@@ -22,6 +24,8 @@ Backtracking for n-queens problem or a graph coloring problem.
 ## Assignment No-05
 
 Develop an elementary chatbot for any suitable customer interaction application.
+
+# Group C
 
 ## Assignment No-06
 
