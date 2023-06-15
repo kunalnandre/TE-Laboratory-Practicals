@@ -8,11 +8,11 @@ structure.
 
 ## Assignment No-02
 
-Implement Greedy search algorithm for Selection Sort.
+Implement A star Algorithm for any game search problem.
 
 ## Assignment No-03
 
-Implement A star Algorithm for any game search problem.
+Implement Greedy search algorithm for Selection Sort.
 
 # Group B
 
